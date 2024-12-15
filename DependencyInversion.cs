@@ -1,61 +1,50 @@
 using System;
-					
-    public class Program
+
+public class Program
+{
+    public static void Main()
     {
-        public static void Main()
-        {
-            NonFlyingBird NonFlyingBird =
-                new NonFlyingBird(new Bird());
-			  flyingBird flyingBird =
-                new flyingBird(new Bird());
-        }
+        IBird nonFlyingBird = new NonFlyingBird();
+        IBird flyingBird = new FlyingBird();
 
-
-        public interface IBird
-        {
-            string? Name { get; set; }
-            int? Speed { get; set; }
-            void IsFly(IBird IBird);
-            void StartFly();
-        }
-
-
-        public class Bird : IBird
-        {
-            public string? Name { get; set; }
-            public int? Speed { get; set; }
-
-            public void IsFly(IBird IBird)
-            {
-                Console.WriteLine($"{(IBird.Name == "flyingBird" ? IBird.Name : "NonFlyingBird")}");
-            }
-
-            public void StartFly()
-            {
-                Console.WriteLine("StartFly");
-            }
-        }
-
-        public class NonFlyingBird : Bird
-        {
-            IBird _IBird;
-            public NonFlyingBird(IBird IBird)
-            {
-                _IBird = IBird;
-                _IBird.Name = "NonFlyingBird";
-                _IBird.IsFly(IBird);
-            }
-        }
-
-        public class flyingBird : Bird
-        {
-            IBird _IBird;
-            public flyingBird(IBird IBird)
-            {
-                _IBird = IBird;
-                _IBird.Name = "flyingBird";
-                _IBird.IsFly(IBird);
-            }
-        }
-
+        nonFlyingBird.StartFly(); // Output: "NonFlyingBird: Shared fly behavior."
+        flyingBird.StartFly();    // Output: "FlyingBird: Shared fly behavior."
     }
+}
+
+// Define the abstraction (interface) for all birds
+public interface IBird
+{
+    string Name { get; } // Define Name in the abstraction
+    void StartFly();
+}
+
+// Implement the base class for shared behavior
+public abstract class Bird : IBird
+{
+    public string Name { get; protected set; } = string.Empty;
+
+    // Shared implementation of StartFly
+    public virtual void StartFly()
+    {
+        Console.WriteLine($"{Name}: Shared fly behavior.");
+    }
+}
+
+// Implement the class for non-flying birds
+public class NonFlyingBird : Bird
+{
+    public NonFlyingBird()
+    {
+        Name = "NonFlyingBird";
+    }
+}
+
+// Implement the class for flying birds
+public class FlyingBird : Bird
+{
+    public FlyingBird()
+    {
+        Name = "FlyingBird";
+    }
+}
