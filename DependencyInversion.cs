@@ -4,23 +4,16 @@ public class Program
 {
     public static void Main()
     {
-        IBird nonFlyingBird = new NonFlyingBird();
-        IBird flyingBird = new FlyingBird();
+        Bird nonFlyingBird = new NonFlyingBird();
+        Bird flyingBird = new FlyingBird();
 
         nonFlyingBird.StartFly(); // Output: "NonFlyingBird: Shared fly behavior."
         flyingBird.StartFly();    // Output: "FlyingBird: Shared fly behavior."
     }
 }
 
-// Define the abstraction (interface) for all birds
-public interface IBird
-{
-    string Name { get; } // Define Name in the abstraction
-    void StartFly();
-}
-
 // Implement the base class for shared behavior
-public abstract class Bird : IBird
+public abstract class Bird
 {
     public string Name { get; protected set; } = string.Empty;
 
