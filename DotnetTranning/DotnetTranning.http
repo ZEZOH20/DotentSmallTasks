@@ -1,0 +1,6 @@
+@DotnetTranning_HostAddress = http://localhost:5068
+
+GET {{DotnetTranning_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
