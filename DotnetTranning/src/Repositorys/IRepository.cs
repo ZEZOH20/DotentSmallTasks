@@ -12,7 +12,8 @@ namespace DotnetTranning.src.Repositorys
         Task<IEnumerable<Entity>> GetAll();
         Task DeleteById(int Id);
         void AttachEntity(Entity Entity);
-
+        public void SaveChanges();
+        public void Dispose();
 
     }
 }

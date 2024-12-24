@@ -6,7 +6,8 @@
     }
   },
   "ConnectionStrings": {
-    "DefaultConnection":"Server=DESKTOP-QUDQJGK\\SQLEXPRESS;Database=DotnetTranning;Encrypt=false;Integrated Security=True"
+    "DefaultConnection":"Server=ABDULRAHMAN\\SQLEXPRESS;Database=DotnetTranning;Encrypt=false;Integrated Security=True"
+   
   },
   "AllowedHosts": "*"
 }

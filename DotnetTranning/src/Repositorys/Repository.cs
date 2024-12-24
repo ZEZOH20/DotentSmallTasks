@@ -9,8 +9,8 @@ namespace DotnetTranning.src.Repositorys
 {
     public class Repository<Entity> : IRepository<Entity> where Entity : class
     {
-        private readonly DbContext _Context;
-        private readonly DbSet<Entity> _Set;
+        private  DbContext _Context;
+        private  DbSet<Entity> _Set;
         public Repository(DbContext Context)
         {
             _Context = Context;
@@ -20,12 +20,14 @@ namespace DotnetTranning.src.Repositorys
         public void AttachEntity(Entity Entity)
         {
             _Set.Add(Entity);
+            SaveChanges();
         }
 
         public async Task DeleteById(int Id)
         {
             var Entity = await _Set.FindAsync(Id);
             _Set.Remove(Entity);
+            SaveChanges();
         }
 
         public async Task<IEnumerable<Entity>> GetAll()

@@ -5174,19 +5174,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ziead\\.nuget\\packages\\": {}
+    "C:\\Users\\bodyh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\college\\courses\\Projects\\dotnet\\DotnetTranning\\DotnetTranning.csproj",
+      "projectUniqueName": "D:\\ziad\\.net_projects\\DotentSmallTasks\\DotnetTranning\\DotnetTranning.csproj",
       "projectName": "DotnetTranning",
-      "projectPath": "D:\\college\\courses\\Projects\\dotnet\\DotnetTranning\\DotnetTranning.csproj",
-      "packagesPath": "C:\\Users\\ziead\\.nuget\\packages\\",
-      "outputPath": "D:\\college\\courses\\Projects\\dotnet\\DotnetTranning\\obj\\",
+      "projectPath": "D:\\ziad\\.net_projects\\DotentSmallTasks\\DotnetTranning\\DotnetTranning.csproj",
+      "packagesPath": "C:\\Users\\bodyh\\.nuget\\packages\\",
+      "outputPath": "D:\\ziad\\.net_projects\\DotentSmallTasks\\DotnetTranning\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ziead\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\bodyh\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5257,7 +5257,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
