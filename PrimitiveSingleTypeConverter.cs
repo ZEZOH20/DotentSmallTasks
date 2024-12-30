@@ -1,10 +1,11 @@
     public static class PrimitiveSingleTypeConverter<T>
-    {
+    {  
+        //Note:Read Input From .txt File Line by Line
         //Note: Work only on : string - int - float - double 
-        // Can't work on Arrays or Enums
+        //Note:Can't work on Arrays or Enums
 
-        static readonly string rootFolder = @"D:\ziad\.net_projects\DotentSmallTasks\DotnetAsync\src\InputFiles\";
-        static readonly string textFile = rootFolder + @"BInterestingDrink.txt";
+        static readonly string rootFolder = @"YourFolderPath";
+        static readonly string textFile = rootFolder + @"PrimitiveSingleTypeConverter.txt";
         public static void Main()
         {
             var Inp = Input();
