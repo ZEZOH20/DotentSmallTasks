@@ -1,0 +1,7 @@
+.input {
+  @apply w-full h-10 border border-gray-200 p-3 rounded-md;
+}
+.inputLabel {
+  @apply block  ml-1 mb-2 text-sm font-semibold text-gray-700 ;
+}
+
